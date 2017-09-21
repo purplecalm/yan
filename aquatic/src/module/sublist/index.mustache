@@ -1,0 +1,12 @@
+<div class="m-module-sublist">
+	{{#list}}
+		<div class="list-item">
+			<div class="item-title">{{name}}</div>
+			<ul>
+				{{#children}}
+				<li data-id="{{id}}">{{name}}</li>
+				{{/children}}
+			</ul>
+		</div>
+	{{/list}}
+</div>

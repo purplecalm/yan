@@ -1,0 +1,40 @@
+<div class="m-pic{{#multi}} m-pic-multi{{/multi}}">
+	<div class="title">{{title}}</div>
+	
+	<div class="panel">
+		{{#multi}}
+		<div class="choosen">
+			<div class="item current" style="width:{{width}}; height:{{height}}">
+				<div class="img"></div>
+				<div class="url"><input type="text" value="" placeholder="设置链接" /></div>
+			</div>
+		</div>
+		<div class="before">	
+			<div class="item new" style="width:{{width}}; height:{{height}}">
+				<div class="img">
+					<div class="tip">+</div>
+				</div>
+			</div>
+		</div>
+		{{/multi}}
+		{{^multi}}
+			<div class="item current" style="width:{{width}}; height:{{height}}">
+				<div class="img"></div>
+				<div class="status">
+					<div class="checked">已选择</div>
+					<button>选择</button>
+				</div>
+			</div>
+			<div class="item new" style="width:{{width}}; height:{{height}}">
+				<div class="img">
+					<div class="tip">+</div>
+				</div>
+			</div>
+		{{/multi}}
+	</div>
+	
+	{{#multi}}<div class="save">保存</div>{{/multi}}
+	
+	<div class="cancel">返回</div>
+	<div class="close">&times;</div>
+</div>

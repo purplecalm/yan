@@ -1,0 +1,191 @@
+@keyframes flyin {
+	from {
+		transform: translate(100%,0);
+	}
+	to {
+		transform: translate(0,0);
+	}
+}
+
+.flyin {
+	animation: flyin 0.4s 1;
+	-webkit-animation: flyin 0.4s 1;
+}
+
+@keyframes flyout {
+	from {
+		transform: translate(0,0);
+	}
+	to {
+		transform: translate(100%,0);
+	}
+}
+
+.flyout {
+	animation: flyout 0.4s 1;
+	-webkit-animation: flyout 0.4s 1;
+}
+
+
+@keyframes fadeout {
+	from {
+		opacity: 1;
+		height: height;
+	}
+	to {
+		opacity: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		height: 0;
+	}
+}
+
+.fadeout {
+	animation: fadeout 1.2s 1;
+	-webkit-animation: fadeout 1.2s 1;
+	opacity: 0;
+	height: 0;
+	padding: 0;
+}
+
+
+@keyframes l0to1 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.l0to1 {
+	animation: l0to1 1s 1;
+	-webkit-animation: l0to1 1s 1;
+}
+
+@keyframes l1to2 {
+	from {
+		width: 200%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.l1to2 {
+	animation: l1to2 0.4s 1;
+	-webkit-animation: l1to2 0.4s 1;
+}
+
+
+@keyframes l2to1 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 200%;
+	}
+}
+
+.l2to1 {
+	animation: l2to1 0.4s 1;
+	-webkit-animation: l2to1 0.4s 1;
+}
+
+@keyframes l2to3 {
+	from {
+		width: 150%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.l2to3 {
+	animation: l2to3 0.4s 1;
+	-webkit-animation: l2to3 0.4s 1;
+}
+
+@keyframes l3to2 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 150%;
+	}
+}
+
+.l3to2 {
+	animation: l3to2 0.4s 1;
+	-webkit-animation: l3to2 0.4s 1;
+}
+
+@keyframes l3to1 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 300%;
+	}
+}
+
+.l3to1 {
+	animation: l3to1 0.4s 1;
+	-webkit-animation: l3to1 0.4s 1;
+}
+
+@keyframes l3to4 {
+	from {
+		width: 133.33%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.l3to4 {
+	animation: l3to4 0.4s 1;
+	-webkit-animation: l3to4 0.4s 1;
+}
+
+@keyframes l4to3 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 133.33%;
+	}
+}
+
+.l4to3 {
+	animation: l4to3 0.4s 1;
+	-webkit-animation: l4to3 0.4s 1;
+}
+
+@keyframes l4to2 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 200%;
+	}
+}
+
+.l4to2 {
+	animation: l4to2 0.4s 1;
+	-webkit-animation: l4to2 0.4s 1;
+}
+
+@keyframes l4to1 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 400%;
+	}
+}
+
+.l4to1 {
+	animation: l4to1 0.4s 1;
+	-webkit-animation: l4to1 0.4s 1;
+}

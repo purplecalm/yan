@@ -1,0 +1,15 @@
+<div class="m-module">
+	<div class="title">模块设置</div>
+	<div class="set-item"><label>模块名称</label><input class="name" type="text" placeholder="请填写标题"{{#module}} value="{{title}}"{{/module}} /></div>
+	<div class="set-item"><label>副标题</label><input class="sub-name" type="text" placeholder="副标题(可为空)"{{#module}} value="{{subTitle}}"{{/module}} /></div>
+	<div class="set-item"><label>隐藏标题</label><input class="hide-name" type="checkbox"{{#module.hideTitle}} checked="checked"{{/module.hideTitle}} /></div>
+	<div class="set-item"><label>模块类型</label><select class="type"><option value="">选择类型</option>{{#modules}}<option value="{{key}}">{{name}}</option>{{/modules}}</select></div>
+	<div class="set-item"><label>位置</label><select class="layouts"><option value="">选择模块位置</option>{{#layouts}}<option value="{{id}}">列{{key}}</option>{{/layouts}}</select></div>
+	<div class="panel">
+	</div>
+	
+	<div class="save">保存</div>
+	<div class="cancel">取消</div>
+	<div class="close">&times;</div>
+	<div class="remove">删除模块</div>
+</div>

@@ -1,0 +1,134 @@
+.header, .content {
+	position: relative;
+}
+
+.header {
+	z-index: 1;
+}
+
+.mobile .header, .mobile .header h1 {
+	height: 40px;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #fff;
+}
+
+.mobile .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #999;
+	text-align: center;
+	box-shadow: 0 0 2px #333;
+}
+
+.web .header, .web .header h1 {
+	height: 60px;
+	line-height: 60px;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #fff;
+}
+
+.web .header {
+	background-color: #428bca;
+	text-align: center;
+	box-shadow: 0 0 2px #333;
+}
+
+.web .content {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	overflow: hidden;
+}
+
+.win-item .m-menu {
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+
+.mobile .win-item .m-menu {
+	height: 100%;
+}
+
+.web .win-item .m-menu {
+	padding-top: 0;
+}
+
+.web .win {
+	display: flex;
+}
+
+.win-item {
+	background-color: #f3f3f3;
+}
+
+.mobile .win-item {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.web .win-item .m-menu {
+	overflow: hidden;
+}
+
+.web .win-item {
+	flex: 1 1 auto;
+	box-shadow: 0 0 4px #000;
+	position: relative;
+	overflow: hidden;
+	width: 1px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.web .preview-link {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.web .preview-link a {
+	padding: 0 30px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	line-height: 26px;
+}
+
+
+/**设置滚动条的样式**/
+.web .win-item::-webkit-scrollbar, .m-map .board::-webkit-scrollbar {
+    width: 6px;
+    position: absolute;
+}
+
+.m-map .board.active::-webkit-scrollbar {
+	opacity: 1;
+}
+
+/**滚动槽**/
+.web .win-item::-webkit-scrollbar-track, .m-map .board::-webkit-scrollbar-track {
+	background: rgba(0,0,0,0);
+}
+/**滚动条滑块**/
+.web .win-item::-webkit-scrollbar-thumb, .m-map .board::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: rgba(158,158,158,0.7);
+    -webkit-box-shadow: inset 0 0 3px #d1cfcf;
+    transform: translate(-3px,0);
+}
+
+.m-map .board.active::-webkit-scrollbar-thumb {
+    background: rgba(245,245,245,0.6);
+}
+
+.web .win-item::-webkit-scrollbar-thumb:window-inactive, .m-map .board::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(245,245,245,0.3);
+}

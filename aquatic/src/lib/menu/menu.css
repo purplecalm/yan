@@ -1,0 +1,276 @@
+.m-menu-dialog {
+	top: 0;
+	position: fixed;
+	z-index: 7;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 0;
+	background-color: #fff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	box-shadow: 0 0 8px #333;
+	padding-top: 40px;
+}
+
+.m-menu {
+	background-color: #f3f3f3;
+}
+
+.m-menu .menus ,.m-menu .label {
+	margin-top: 40px;
+	overflow: hidden;
+	border: 1px solid #eee;
+	border-width: 1px 0;
+	background-color: #fff;
+}
+
+.m-menu .description {
+	font-size: 13px;
+	color: #999;
+	margin: 24px 0 -40px;
+	height: 24px;
+	line-height: 24px;
+	text-indent: 10px;
+}
+
+.m-menu .label {
+	padding: 15px 10px;
+	text-align: center;
+	font-size: 120%;
+	font-weight: 500;
+}
+
+.m-menu .menus li {
+	background-color: #fff;
+	margin-top: -1px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.m-menu .menus li .box {
+	width: 100%;
+	position: relative;
+}
+
+.m-menu .menus li .scroll-menu {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	white-space: nowrap;
+	width: 100%;
+	height: 100%;
+}
+
+.m-menu .menus li .scroll-menu .item {
+	width: 80px;
+	height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	float: left;
+	background-color: #bbb;
+	color: #000;
+	font-size: 15px;
+}
+
+.m-menu .menus li .scroll-menu .item .text {
+	text-align: center;
+	-webkit-flex: 1 1 auto;
+	flex: 1 1 auto;
+	margin: 0;
+	padding: 0;
+}
+
+.m-menu .menus li .scroll-menu .item.remove {
+	background-color: #c00;
+	color: #fff;
+}
+
+.web .m-menu .menus li:hover {
+	background-color: #fec;
+}
+
+.web .m-menu .menus li.active {
+	background-color: #fc9;
+}
+
+.m-menu .menus li .text, .m-menu .menus li form {
+	margin: 0 0 0 20px;
+	padding-right: 20px;
+	line-height: 40px;
+	border-top: 1px solid #eee;
+}
+
+.m-menu .menus li .deep-text {
+	position: absolute;
+	font-size: 80%;
+	right: 25px;
+	line-height: 40px;
+	top: 0;
+	color: #999;
+}
+
+.m-menu .menus li.deep .box:after {
+	content: ' ';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #999;
+	border-width: 1px 1px 0 0;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.m-menu .menus li.checked .box:after {
+	content: ' ';
+	display: block;
+	width: 5px;
+	height: 10px;
+	border: 1px solid #38a235;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.m-menu .menus li.inputing .box:after {
+	display: none;
+}
+
+.m-menu .menus li.remove {
+	text-align: center;
+	color: #c00;
+}
+
+.m-menu .menus li.inputing {
+}
+
+.m-menu .menus li.inputing .text {
+	display: none;
+}
+
+.m-menu .menus li.inputing form {
+	height: 40px;
+}
+
+.m-menu .menus li.inputing input, .m-menu .menus li.inputing input:focus {
+	border: none;
+	outline: none;
+	line-height: 24px;
+	height: 24px;
+	width: 100%;
+	margin: 8px 0;
+}
+
+.m-menu .menus li .mask {
+	background: #fff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 1px;
+	opacity: 0.3;
+}
+
+.m-menu .menus li select {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top: 0;
+	z-index: 10;
+	opacity: 0;
+}
+
+.m-menu .menus li .switcher {
+	border-radius: 30px;
+	height: 26px;
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	width: 45px;
+	border: 1px solid #666;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.m-menu .menus li .switcher:after {
+	content: ' ';
+	width: 26px;
+	height: 26px;
+	border-radius: 30px;
+	border: 1px solid #999;
+	box-sizing: border-box;
+	position: absolute;
+	top: -1px;
+	background-color: #fff;
+	box-shadow: 1px 1px 2px #999;
+}
+
+.m-menu .menus li .switcher.on {
+	background-color: #2ed22e;
+	border-color: #2ed22e;
+}
+
+.m-menu .menus li .switcher.on:after {
+	left: 17px;
+}
+
+.m-menu .menus li .switcher.off:after {
+	left: -1px;
+}
+
+.m-menu .menus li .switcher.moveon:after {
+	animation: moveon 0.1s 1;
+	-webkit-animation: moveon 0.1s 1;
+}
+
+
+@keyframes moveon {
+	from {
+		left: -1px;
+	}
+	to {
+		left: 17px;
+	}
+}
+
+.m-menu .menus li .switcher.moveoff:after {
+	animation: moveoff 0.1s 1;
+	-webkit-animation: moveoff 0.1s 1;
+}
+
+
+@keyframes moveoff {
+	from {
+		left: 17px;
+	}
+	to {
+		left: -1px;
+	}
+}
+
+
+.m-menu .toolbar .search {
+	padding: 0 10px 0 90px;
+}
+
+.m-menu .toolbar .search .box {
+	padding: 10px 0;
+}
+
+.m-menu .toolbar .search input, .m-menu .toolbar .search input:focus {
+	border: none;
+	outline: none;
+	width: 100%;
+	padding: 0;
+	border-radius: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-indent: 10px;
+}

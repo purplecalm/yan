@@ -1,0 +1,10 @@
+<div class="item" style="width:{{width}}; height:{{height}}">
+	<div class="img">{{#image}}<img src="{{url}}" />{{/image}}</div>
+	{{^multi}}<div class="status">
+		<div class="checked">已选择</div>
+		<button>选择</button>
+	</div>{{/multi}}
+	{{#multi}}
+	<div class="url"><input type="text" value="" placeholder="设置链接" /></div>
+	{{/multi}}
+</div>

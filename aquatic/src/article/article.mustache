@@ -1,0 +1,22 @@
+<div class="m-article">
+	<div class="title"><label>标题:</label><input type="text" value="{{title}}" /></div>
+	<div class="thumb">
+		<label>缩略图:</label>
+		<div class="thumb-panel">
+			<div class="stage"{{^image}} style="display:none"{{/image}}>
+				<div class="image-frame">
+					<img src="{{image}}" />
+				</div>
+				<span class="hide">删除</span>
+			</div>
+			<input type="hidden" value="{{image}}" />
+			<div class="trigger">点击这里上传图片</div>
+		</div>
+	</div>
+	<div class="body"><label>内容:</label><textarea>{{content}}</textarea></div>
+	
+	<div class="save">保存</div>
+	<div class="cancel">取消</div>
+	<div class="close">&times;</div>
+	{{#id}}<div class="remove">删除文章</div>{{/id}}
+</div>

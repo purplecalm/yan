@@ -1,0 +1,48 @@
+<div class="m-menu{{#dialog}} m-menu-dialog{{/dialog}}">
+	{{#dialog}}
+	<div class="toolbar">
+		{{#back}}<div class="back"><span class="arrow-left"></span>{{back}}</div>{{/back}}
+		
+		{{^search}}
+		<div class="title">{{title}}</div>
+		{{#ok}}<div class="ok">{{text}}</div>{{/ok}}
+		{{/search}}
+		{{#search}}
+		<div class="search">
+			<div class="box">
+				<form><input type="text" value="{{text}}" /></form>
+			</div>
+		</div>
+		{{/search}}
+	</div>
+	{{/dialog}}
+	{{#label}}
+	<div class="label">
+		{{text}}
+	</div>
+	{{/label}}
+	<ul class="menus">
+	{{#menu}}
+		{{^api}}
+			{{#.}}
+			{{^description}}
+			<li class="{{#cls}}{{cls}} {{/cls}}{{#deep}}deep{{/deep}}"{{#key}} data-key="{{key}}"{{/key}}>
+				<div class="box">
+					<div class="text">{{name}}</div>{{#deep}}<div class="deep-text">{{deepText}}</div>{{/deep}}{{#switcher}}<div class="switcher{{#on}} on{{/on}}"></div>{{/switcher}}
+					<div class="scroll-menu">
+					{{#scrollMenu}}
+						<div class="item{{#cls}} {{cls}}{{/cls}}" data-index="{{index}}"><div class="text">{{name}}</div></div>
+					{{/scrollMenu}}
+					</div>
+				</div>
+			</li>
+			{{/description}}
+			{{#description}}</ul><div class="description">{{text}}</div><ul class="menus">{{/description}}
+			{{/.}}
+			{{^.}}
+				</ul><ul class="menus">
+			{{/.}}
+		{{/api}}
+	{{/menu}}
+	</ul>
+</div>

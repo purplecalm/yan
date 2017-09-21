@@ -1,0 +1,46 @@
+.m-preview {
+	width: 80%;
+	position: relative;
+	margin: 50px auto 10px;
+	border: 2px solid #999;
+	background-color: #fff;
+	white-space: nowrap;
+}
+
+.m-preview:after {
+	content: '首页栅格预览 (20格)';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: -30px;
+}
+
+.m-preview .col {
+	height: 100%;
+	overflow: hidden;
+	display: inline-flex;
+	align-items:center;
+	opacity: 0.8;
+}
+
+.m-preview .col .col-name {
+	flex: 1 1 auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+.m-preview .col.index0 {
+	background-color: #fec;
+}
+
+.m-preview .col.index1 {
+	background-color: #cef;
+}
+
+.m-preview .col.index2 {
+	background-color: #ecf;
+}
+
+.m-preview .col.index3 {
+	background-color: #fce;
+}

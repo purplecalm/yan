@@ -1,0 +1,43 @@
+.toolbar {
+	background-color: #999;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	box-shadow: 0 0 2px #333;
+}
+
+.toolbar .title {
+	margin: 0 60px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	font-size: 16px;
+}
+
+.toolbar .back {
+	float: left;
+	padding-left: 10px;
+}
+
+.toolbar .arrow-left {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+	border: 2px solid #fff;
+	position: relative;
+	border-width: 0 0 2px 2px;
+}
+
+.toolbar .ok {
+	padding-right: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

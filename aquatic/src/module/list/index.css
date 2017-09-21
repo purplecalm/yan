@@ -1,0 +1,29 @@
+.m-module-list {
+	display: flex;
+	padding-bottom: 30px;
+}
+
+.m-module-list .list-item {
+	flex: 1 1 auto;
+	text-align: center;
+	line-height: 36px;
+	width: 1px;
+}
+
+.m-module-list .list-item .item-title {
+	margin-right: 10px;
+	font-weight: 400;
+	color: #666;
+	background-color: #f3f3f3;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.m-module-list .list-item .item-title:hover {
+	background-color: #eee;
+}
+
+.m-module-list .list-item .item-title.checked {
+	background-color: #e88844;
+	color: #fff;
+}

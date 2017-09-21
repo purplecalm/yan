@@ -1,0 +1,39 @@
+.m-module-sublist {
+	display: flex;
+	padding-bottom: 30px;
+}
+
+.m-module-sublist .list-item {
+	flex: 1 1 auto;
+	text-align: center;
+	line-height: 36px;
+	width: 1px;
+}
+
+.m-module-sublist .list-item .item-title {
+	margin: 0 10px;
+	border-bottom: 1px solid #ccc;
+	font-weight: 400;
+	color: #666;
+	background-color: #f3f3f3;
+}
+
+.m-module-sublist .list-item ul {
+	margin: 0 20px;
+}
+
+.m-module-sublist .list-item li {
+	margin-top: 5px;
+	line-height: 30px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.m-module-sublist .list-item li:hover {
+	background-color: #eee;
+}
+
+.m-module-sublist .list-item li.checked {
+	background-color: #e88844;
+	color: #fff;
+}

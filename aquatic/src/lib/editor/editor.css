@@ -1,0 +1,46 @@
+.toolbar-item-flash {
+	background-position: -80px -120px;
+}
+
+.toolbar-menu-flash {
+	position: absolute;
+	top: 41px;
+	left: 0;
+	background-color: #fff;
+	border: 2px solid #999;
+	border-radius: 4px;
+	padding: 15px 5px;
+	width: 300px;
+	cursor: default;
+}
+
+.toolbar-menu-flash input {
+	width: 200px !important;
+	font-size: 13px;
+	line-height: 17px;
+	height: 17px;
+	padding: 5px;
+}
+
+.toolbar-menu-flash button {
+	width: 80px;
+	height: 30px;
+	padding: 0;
+	font-size: 13px;
+}
+
+.qeditor-toolbar input {
+	box-sizing: content-box;
+}
+
+.qeditor-uploader {
+	cursor: pointer;
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #eee;
+}
+
+.qeditor-uploader:hover {
+	background-color: #fc9;
+}

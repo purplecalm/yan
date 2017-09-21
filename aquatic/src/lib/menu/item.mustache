@@ -1,0 +1,10 @@
+<li class="{{#cls}}{{cls}} {{/cls}}{{#deep}}deep{{/deep}}"{{#key}} data-key="{{key}}"{{/key}}>
+	<div class="box">
+		<div class="text">{{name}}</div>{{#deep}}<div class="deep-text">{{deepText}}</div>{{/deep}}{{#switcher}}<div class="switcher{{#on}} on{{/on}}"></div>{{/switcher}}
+		<div class="scroll-menu">
+		{{#scrollMenu}}
+			<div class="item{{#cls}} {{cls}}{{/cls}}" data-index="{{index}}"><div class="text">{{name}}</div></div>
+		{{/scrollMenu}}
+		</div>
+	</div>
+</li>
