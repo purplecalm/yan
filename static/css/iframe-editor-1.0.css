@@ -1,0 +1,17 @@
+.editormode, .edited { font-size: 13px; line-height: 150%; font-family: 'Microsoft Yahei','宋体',Arial}
+.editormode ul,.editormode ol,
+.edited ul, .edited ol {
+	padding-left: 30px;
+}
+
+.editormode ol li,
+.edited ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+
+.editormode ul li,
+.edited ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}

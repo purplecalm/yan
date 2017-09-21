@@ -1,0 +1,8 @@
+
+1. 安装nodejs, 可以从nodejs.org上找到
+
+2. 在当前目录里, 安装 npm install, 如果网络有问题安装不上依赖, 可以用 npm install --registry https://registry.npm.taobao.org
+
+3. mysql的安装导入config/db.sql
+
+4. 运行node dispatch.js就可以启动服务

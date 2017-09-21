@@ -1,0 +1,119 @@
+body {
+	background-color: #eee;
+}
+
+.category-bg {
+	width: 100%;
+	overflow: hidden;
+	min-height: 290px;
+	background-color: #016aab;
+}
+
+.category-bg img {
+	width: 100%;
+}
+
+.category-bg .container {
+	position: relative;
+}
+
+.category-bg .container div {
+	vertical-align: top;
+	line-height: 0;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.category-bg .before,
+.category-bg .after {
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+.category-bg .before img,
+.category-bg .after img {
+	opacity: 0.5;
+}
+
+.category-bg .before {
+	left: -100%;
+}
+
+.category-bg .after {
+	right: -100%;
+}
+
+.m-subnav, .m-content {
+	background-color: #fff;
+	margin: 30px 0;
+	overflow: hidden;
+}
+
+.m-subnav h2 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 36px;
+	background-color: #555;
+	text-indent: 12px;
+}
+
+.m-subnav ul {
+	padding: 12px 0;
+}
+
+.m-subnav ul li {
+	line-height: 30px;
+	margin-bottom: 1px;
+}
+
+.m-subnav ul a {
+	display: block;
+	padding: 0 12px;
+}
+
+.m-subnav ul a:hover, .m-subnav li.current a{
+	background-color: #ccc;
+}
+
+.m-content {
+	padding: 10px 15px;
+	line-height: 200%;
+}
+
+.m-content .title {
+	background-color: #eee;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.m-content .content {
+	padding: 10px;
+	text-indent: 30px;
+}
+
+.article-list {
+	background-color: #fff;
+	min-height: 400px;
+}
+
+
+.pager {
+	text-align: center;
+}
+
+.pager a, .pager span {
+	text-align: center;
+	width: 40px;
+	display: inline-block;
+	text-indent: 0;
+}
+
+.pager span {
+	cursor: default;
+}
+
+.pager em {
+	font-style: normal;
+}

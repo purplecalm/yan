@@ -1,0 +1,25 @@
+<div class="slider-outer">
+	<div class="container">
+		<div class="sliders">
+			<% for( var i=0; i<config.sliders.length; i++){ %>
+			<div class="slider-item wrap">
+				<% if( config.sliders[i].url ) { %><a href="<%= config.sliders[i].url %>" target="_blank"><% } %>
+				<img src="<%= config.sliders[i].img %>" />
+				<% if( config.sliders[i].url ) { %></a><% } %>
+			</div>
+			<% } %>
+		</div>
+	</div>
+</div>
+
+<div class="container modules">
+	<div class="raster-container">
+		<% for( var i=0; i<config.layouts.length; i++){ %>
+		<div class="raster r<%= config.layouts[i].width %>">
+			<% for( var j=0; j<layouts[config.layouts[i].id].length; j++) { %>
+			<%- layouts[config.layouts[i].id][j] %>
+			<% } %>
+		</div>
+		<% } %>
+	</div>
+</div>
