@@ -59,3 +59,14 @@ typings/
 
 # svn file
 .svn
+
+# upload file
+static/upload/*
+
+# fe minified files
+aquatic/prd
+aquatic/html
+aquatic/ver
+
+# home config
+config/web.config
