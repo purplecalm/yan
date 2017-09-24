@@ -24,6 +24,12 @@ exports.get = function* (cfg, limit, offset) {
 	return rows;
 };
 
+exports.getById = function* (id) {
+	var rows = yield Article.findById(id);
+	
+	return rows;
+};
+
 exports.create = function* (cfg){
 	
 	return yield Article.create(cfg);

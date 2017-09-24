@@ -2,21 +2,30 @@
 
 const config = require('../../config');
 const CacheService = require('../../services/cache');
-const AricleService = require('../../services/article');
+const ArticleService = require('../../services/article');
 
 module.exports = function* show(next) {
 	var params = this.params;
-	// normal: {id: $id, page: $page}
-	// scope: [$id,$page]
+	// normal: {id: $id, page: $page, article: $article}
+	// scope: [$id,$page,$article]
 	
-	var page=parseInt(params.page,10)||1;
-	var category = CacheService.getCategory(params.id);
-	var sub=false, name=category.name;
+	var content=false,sub=false,category=false,article=false,page=parseInt(params.page,10)||1;
 	
+	if(params.article){
+		article=yield ArticleService.getById(params.article);
+		if(!article){
+			return this.status=404;
+		}
+		
+		category=CacheService.getCategory(article.category);
+	}else{
+		category=CacheService.getCategory(params.id);
+	}
+	
+	var name=category.name;
 	if(category.level==2){
 		sub=category;
 		category= CacheService.getCategory(sub.parent);
-		
 		name+=' :: '+category.name;
 	}else{
 		if(category.children&&category.children.length){
@@ -24,17 +33,19 @@ module.exports = function* show(next) {
 		}
 	}
 	
-	var content=false;
-	if(sub){
+	
+	if(article){
+		name=article.title+' :: '+name;
+	}else if(sub){
 		if(sub.single){
-			content=yield AricleService.get({category:sub.id},1);
+			content=yield ArticleService.get({category:sub.id},1);
 			if(content.length){
 				content=content[0];
 			}else{
 				content=false;
 			}
 		}else{
-			content=yield AricleService.findAndCount({category:sub.id},page);
+			content=yield ArticleService.findAndCount({category:sub.id},page);
 			if(content.count){
 				var totalPage=parseInt((content.count-1)/config.pageCount)+1;
 				
@@ -65,6 +76,7 @@ module.exports = function* show(next) {
 		category: category,
 		sub: sub,
 		content: content,
+		article: article,
 		type: 'category'
 	});
 };

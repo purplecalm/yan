@@ -123,7 +123,15 @@ var Map={
 					sets[key]=body[key];
 				}
 			}
-			return yield ArticleService.update(body.id,sets);
+			var results= yield ArticleService.update(body.id,sets);
+			if(!results.length||!results[0]){
+				return {};
+			}
+			
+			var arts= yield ArticleService.get({
+				id: parseInt(body.id,10)
+			});
+			return arts[0];
 		}else{
 			return {};
 		}

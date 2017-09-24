@@ -88,7 +88,9 @@
 }
 
 .module-item {
-	margin: 30px 0;
+	margin: 20px 0;
+	padding: 15px;
+	background-color: #fff;
 }
 
 .module-title {
@@ -96,7 +98,6 @@
 	font-weight: 400;
 	line-height: 30px;
 	font-size: 18px;
-	border-bottom: 1px solid #ccc;
 	position: relative;
 }
 
@@ -110,8 +111,9 @@
 
 .module-title h2 {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: normal;
 	display: inline;
+	color: #333;
 }
 
 .module-title .module-sub-title {
@@ -121,8 +123,9 @@
 }
 
 .module-content {
-	margin-top: 5px;
+	padding: 10px;
 	line-height: 180%;
+	color: #555;
 }
 
 .m-sublist {
@@ -188,7 +191,19 @@
 	width: 100%;
 	box-sizing: border-box;
 	position: relative;
-	padding-right: 60px;
+	margin-bottom: 10px;
+}
+
+.m-list .module-content li a {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.m-list .module-content li .summary {
+	line-height: 150%;
+	color: #666;
 }
 
 .m-list .module-content ul {
@@ -218,8 +233,6 @@
 }
 
 .m-list .module-content li .time {
-	position: absolute;
-	right: 0;
-	top: 0;
+	display: block;
 	color: #999;
 }

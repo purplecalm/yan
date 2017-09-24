@@ -16,20 +16,21 @@
 		<script src="/js/<%= locals.type %>.js"></script>
 	</head>
 	<body>
-	<div id="header">
-		<div class="container">
-			<div class="logo">
-			  <a href="/"><img src="{{logoURL}}"></a>
-			</div>
-			<div class="navigator">
-				{{navigator}}
+	<div id="layout">
+		<div id="header">
+			<div class="container">
+				<div class="logo">
+				  <a href="/"><img src="{{logoURL}}"></a>
+				</div>
+				<div class="navigator">
+					{{navigator}}
+				</div>
 			</div>
 		</div>
+		<div class="content">
+			<%- locals.body %>
+		</div>
+		{{footer}}
 	</div>
-	<div class="content">
-		<%- locals.body %>
-	</div>
-    </div>
-	{{footer}}
 	</body>
 </html>

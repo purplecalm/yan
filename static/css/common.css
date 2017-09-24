@@ -23,31 +23,34 @@ a {
 }
 
 .raster-container {
-	margin-left: -40px;
+	margin-left: -20px;
 }
 
 .raster {
-	margin-left: 40px;
+	margin-left: 20px;
 	float: left;
 	min-height: 300px;
 }
 
-.r1{ width: 52px; }
-.r3{ width: 116px; }
-.r4{ width: 168px; }
-.r5{ width: 220px; }
-.r6{ width: 272px; }
-.r7{ width: 324px; }
-.r8{ width: 376px; }
-.r9{ width: 428px; }
-.r10{ width: 480px; }
-.r11{ width: 532px; }
-.r12{ width: 584px; }
-.r13{ width: 636px; }
-.r14{ width: 688px; }
-.r15{ width: 740px; }
-.r16{ width: 792px; }
-.r17{ width: 844px; }
+.r1{ width: 31px; }
+.r2{ width: 82px; }
+.r3{ width: 133px; }
+.r4{ width: 184px; }
+.r5{ width: 235px; }
+.r6{ width: 286px; }
+.r7{ width: 337px; }
+.r8{ width: 388px; }
+.r9{ width: 439px; }
+.r10{ width: 490px; }
+.r11{ width: 541px; }
+.r12{ width: 592px; }
+.r13{ width: 643px; }
+.r14{ width: 694px; }
+.r15{ width: 745px; }
+.r16{ width: 796px; }
+.r17{ width: 847px; }
+.r18{ width: 898px; }
+.r19{ width: 949px; }
 .r20{ width: 1000px; }
 
 @media (min-width: 1400px) {
@@ -55,22 +58,25 @@ a {
 		width: 1200px
 	}
 	
-	.r1{ width: 62px; }
-	.r3{ width: 146px; }
-	.r4{ width: 208px; }
-	.r5{ width: 270px; }
-	.r6{ width: 332px; }
-	.r7{ width: 394px; }
-	.r8{ width: 456px; }
-	.r9{ width: 518px; }
-	.r10{ width: 580px; }
-	.r11{ width: 642px; }
-	.r12{ width: 704px; }
-	.r13{ width: 766px; }
-	.r14{ width: 828px; }
-	.r15{ width: 890px; }
-	.r16{ width: 952px; }
-	.r17{ width: 1014px; }
+	.r1{ width: 41px; }
+	.r2{ width: 102px; }
+	.r3{ width: 163px; }
+	.r4{ width: 224px; }
+	.r5{ width: 285px; }
+	.r6{ width: 346px; }
+	.r7{ width: 407px; }
+	.r8{ width: 468px; }
+	.r9{ width: 529px; }
+	.r10{ width: 590px; }
+	.r11{ width: 651px; }
+	.r12{ width: 712px; }
+	.r13{ width: 773px; }
+	.r14{ width: 834px; }
+	.r15{ width: 895px; }
+	.r16{ width: 956px; }
+	.r17{ width: 1017px; }
+	.r18{ width: 1078px; }
+	.r19{ width: 1139px; }
 	.r20{ width: 1200px; }
 }
 
@@ -79,33 +85,37 @@ a {
 		width: 1400px
 	}
 
-	.r1{ width: 72px; }
-	.r3{ width: 176px; }
-	.r4{ width: 248px; }
-	.r5{ width: 320px; }
-	.r6{ width: 392px; }
-	.r7{ width: 464px; }
-	.r8{ width: 536px; }
-	.r9{ width: 608px; }
-	.r10{ width: 680px; }
-	.r11{ width: 752px; }
-	.r12{ width: 824px; }
-	.r13{ width: 896px; }
-	.r14{ width: 968px; }
-	.r15{ width: 1040px; }
-	.r16{ width: 1112px; }
-	.r17{ width: 1184px; }
+	.r1{ width: 51px; }
+	.r2{ width: 122px; }
+	.r3{ width: 193px; }
+	.r4{ width: 264px; }
+	.r5{ width: 335px; }
+	.r6{ width: 406px; }
+	.r7{ width: 477px; }
+	.r8{ width: 548px; }
+	.r9{ width: 619px; }
+	.r10{ width: 690px; }
+	.r11{ width: 761px; }
+	.r12{ width: 832px; }
+	.r13{ width: 903px; }
+	.r14{ width: 974px; }
+	.r15{ width: 1045px; }
+	.r16{ width: 1116px; }
+	.r17{ width: 1187px; }
+	.r18{ width: 1258px; }
+	.r19{ width: 1329px; }
 	.r20{ width: 1400px; }
 }
 
 body {
+	background-color: #f4f4f4;
 }
 
 .logo {
 }
 
 .content {
-	min-height: 1200px;
+	min-height: 400px;
 }
 
 
@@ -199,38 +209,62 @@ body {
 #footer {
 	clear: both;
 	margin-top: 200px;
-	background-color: #686c6f;
+	background-color: #37383a;
 	font-size: 13px;
+	border-bottom: 30px solid #292a2c;
 }
 
 #footer .container {
-	overflow: hidden;
-	height: 350px;
+	padding: 15px 0 50px;
 	position: relative;
 }
 
 #footer a {
-	color: #eee;
+	color: #fff;
+	font-size: 12px;
 }
 
 #footer .fnav {
 	display: flex;
 	vertical-align: top;
-	padding-top: 50px;
 }
 
 #footer .container .nav-item {
 	flex: 1 1 auto;
 	width: 140px;
 	display: inline-block;
-	text-align: center;
-	line-height: 30px;
+	line-height: 23px;
+}
+
+#footer .fnav .home {
+	display: none;
+}
+
+#footer .container .sub {
+	margin-top: 10px;
 }
 
 #footer .container .nav-item .box a {
 	font-weight: 600;
-	color: #fff;
 	line-height: 36px;
+	font-size: 14px;
+}
+
+#footer .container .sub-item {
+	position: relative;
+	padding-left: 8px;
+}
+
+#footer .container .sub-item:after {
+	content: ' ';
+	position: absolute;
+	border: 1px solid #fff;
+	border-width: 1px 1px 0 0;
+	transform: rotate(45deg);
+	left: -1px;
+	top: 10px;
+	width: 3px;
+	height: 3px;
 }
 
 #footer .cert {
@@ -238,6 +272,7 @@ body {
 	text-align: center;
 	width: 100%;
 	position: absolute;
-	bottom: 10px;
-	left: 10px;
+	bottom: -30px;
+	left: 0;
+	line-height: 30px;
 }

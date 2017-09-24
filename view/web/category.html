@@ -23,32 +23,43 @@
 			</div>
 		</div>
 		<div class="raster r16">
+			<% if(article) { %>
+			<div class="m-nav-path"><a href="/">首页</a><span></span><a href="/category/<%= category.id %>"><%= category.name %></a><span></span><a href="/category/<%= sub.id %>"><%= sub.name %></a></div>
 			<div class="m-content">
-			<% if(sub&&sub.name) { %><div class="title"><h2><%= sub.name %></h2></div><% } %>
-			<div class="content">
-			<% if(!content) { %>
-			<div class="under-cons">暂无内容.</div>
-			<% } else { %>
-				<% if(sub.single) { %><%- content.content %><% } else { %>
-				<ul class="article-list">
-					<% for( var i=0; i<content.rows.length; i++ ) { %><li><a href="/article"><%= content.rows[i].title %></a><span class="date"><%= content.rows[i].date %></span></li><% } %>
-				</ul>
-				<div class="pager">
-					<% if(content.prev) { %>
-						<a class="first" href="/category/<%= sub.id %>"><em>&lt;&lt;</em></a><a class="prev" href="/category/<%= sub.id %>/page/<%= content.prev %>"><em>&lt;</em></a>
-					<% } else { %>
-						<span class="first"><em>&lt;&lt;</em></span><span class="prev"><em>&lt;</em></span>
-					<% } %>
-					<span class="current"><%= content.page %> / <%= content.total %></span>
-					<% if(content.next) { %>
-						<a href="/category/<%= sub.id %>/page/<%= content.next %>"><em>&gt;</em></a><a href="/category/<%= sub.id %>/page/<%= content.total %>"><em>&gt;&gt;</em></a>
-					<% } else { %>
-						<span class="next"><em>&gt;</em></span><span class="last"><em>&gt;&gt;</em></span>
-					<% } %>
+				<div class="title"><h2><%= article.title %></h2></div>
+				<div class="content">
+					<%- article.content %>
 				</div>
-				<% } %>
-			<% } %>
 			</div>
+			<% }else{ %>
+			<div class="m-content">
+				<% if(sub&&sub.name) { %><div class="title"><h2><%= sub.name %></h2></div><% } %>
+				<div class="content">
+				<% if(!content) { %>
+				<div class="under-cons">暂无内容.</div>
+				<% } else { %>
+					<% if(sub.single) { %><%- content.content %><% } else { %>
+					<ul class="article-list">
+						<% for( var i=0; i<content.rows.length; i++ ) { %><li><a href="/article/<%= content.rows[i].id %>"><%= content.rows[i].title %></a><span class="date"><%= content.rows[i].date %></span></li><% } %>
+					</ul>
+					<div class="pager">
+						<% if(content.prev) { %>
+							<a class="first" href="/category/<%= sub.id %>"><em></em></a><a class="prev" href="/category/<%= sub.id %>/page/<%= content.prev %>"><em></em></a>
+						<% } else { %>
+							<span class="first"><em></em></span><span class="prev"><em></em></span>
+						<% } %>
+						<span class="current"><%= content.page %> / <%= content.total %></span>
+						<% if(content.next) { %>
+							<a class="next" href="/category/<%= sub.id %>/page/<%= content.next %>"><em></em></a><a class="last" href="/category/<%= sub.id %>/page/<%= content.total %>"><em></em></a>
+						<% } else { %>
+							<span class="next"><em></em></span><span class="last"><em></em></span>
+						<% } %>
+					</div>
+					<% } %>
+				<% } %>
+				</div>
+			</div>
+			<% } %>
 		</div>
 	</div>
 </div>

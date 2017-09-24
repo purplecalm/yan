@@ -16,13 +16,14 @@
 		<script src="/js/<%= locals.type %>.js"></script>
 	</head>
 	<body>
-	<div id="header">
-		<div class="container">
-			<div class="logo">
-			  <a href="/"><img src="/images/logo.png"></a>
-			</div>
-			<div class="navigator">
-				<li class="nav-item home"><div class="box"><a href="/">首页</a></div></li>
+	<div id="layout">
+		<div id="header">
+			<div class="container">
+				<div class="logo">
+				  <a href="/"><img src="/images/logo.png"></a>
+				</div>
+				<div class="navigator">
+					<li class="nav-item home"><div class="box"><a href="/">首页</a></div></li>
 <li class="nav-item"><div class="box"><a href="/category/1">新闻资讯</a></div>
 <ul class="sub">
 <li class="sub-item"><a href="/category/6">集团动态</a></li>
@@ -43,14 +44,13 @@
 </li>
 <li class="nav-item"><div class="box"><a href="/category/9">联系我们</a></div>
 </li>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="content">
-		<%- locals.body %>
-	</div>
-    </div>
-	<div id="footer">
+		<div class="content">
+			<%- locals.body %>
+		</div>
+		<div id="footer">
 	<div class="container">
 		<ul class="fnav">
 			<li class="nav-item home"><div class="box"><a href="/">首页</a></div></li>
@@ -78,5 +78,6 @@
 		<div class="cert">Copyright ©2017-2020 宿鸭湖生态养殖股份有限公司 豫ICP备10000000号-X</div>
 	</div>
 </div>
+	</div>
 	</body>
 </html>

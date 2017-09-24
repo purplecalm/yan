@@ -1,5 +1,4 @@
 body {
-	background-color: #eee;
 }
 
 .category-bg {
@@ -80,6 +79,7 @@ body {
 .m-content {
 	padding: 10px 15px;
 	line-height: 200%;
+	padding-bottom: 60px;
 }
 
 .m-content .title {
@@ -91,6 +91,7 @@ body {
 .m-content .content {
 	padding: 10px;
 	text-indent: 30px;
+	min-height: 400px;
 }
 
 .article-list {
@@ -101,13 +102,68 @@ body {
 
 .pager {
 	text-align: center;
+	width: 244px;
+	overflow: hidden;
+	margin: 0 auto;
+	height: 30px;
+	border-radius: 3px;
 }
 
 .pager a, .pager span {
 	text-align: center;
 	width: 40px;
-	display: inline-block;
 	text-indent: 0;
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	vertical-align: top;
+	background-color: #65bcff;
+	float: left;
+}
+
+.pager span {
+	cursor: default;
+	background-color: #ddd;
+}
+
+.pager .first em,
+.pager .prev em,
+.pager .next em,
+.pager .last em {
+	background: no-repeat url(/images/icons.png);
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	background-position: 0 0;
+}
+
+.pager .first,
+.pager .prev {
+	border-right: 1px solid #fff;
+}
+
+.pager .last,
+.pager .next {
+	border-left: 1px solid #fff;
+}
+
+.pager .current {
+	width: 80px;
+	background-color: #fff;
+}
+
+.pager .first em {
+	background-position: 0 -20px;
+}
+
+.pager .next em {
+	background-position: -20px 0;
+}
+
+.pager .last em {
+	background-position: -20px -20px;
 }
 
 .pager span {
