@@ -139,6 +139,20 @@ body {
 	margin-bottom: 10px;
 }
 
+.m-content .article-title {
+	text-align: center;
+	margin: 10px 0;
+}
+
+.m-content .article-title h2 {
+	font-weight: normal;
+}
+
+.m-content .article-title p {
+	font-size: 12px;
+	color: #999;
+}
+
 .m-content .content {
 	padding: 10px;
 	text-indent: 30px;

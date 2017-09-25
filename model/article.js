@@ -49,6 +49,14 @@ module.exports = function (sequelize, DataTypes) {
 				var d=new Date(this.getDataValue('createdAt'));
 				return String(101+d.getMonth()).substr(1)+'/'+String(100+d.getDate()).substr(1);
 			}
+		},
+		fullDate: {
+			type: DataTypes.VIRTUAL,
+			allowNull: true,
+			get: function(){
+				var d=new Date(this.getDataValue('createdAt'));
+				return String(d.getFullYear())+'-'+String(101+d.getMonth()).substr(1)+'-'+String(100+d.getDate()).substr(1);
+			}
 		}
 	}, {
 		tableName: 'article'
