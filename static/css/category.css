@@ -134,9 +134,14 @@ body {
 }
 
 .m-content .title {
-	background-color: #eee;
-	padding: 10px;
-	margin-bottom: 10px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.m-content .title h2 {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 30px;
 }
 
 .m-content .article-title {
