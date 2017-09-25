@@ -24,6 +24,7 @@ a {
 
 .raster-container {
 	margin-left: -20px;
+	overflow: hidden;
 }
 
 .raster {
@@ -107,11 +108,17 @@ a {
 	.r20{ width: 1400px; }
 }
 
-body {
+body, html {
+	overflow-x: hidden;
+	overflow-y: auto;
 	background-color: #f4f4f4;
 }
 
 .logo {
+}
+
+.logo a, .logo img {
+	border: none;
 }
 
 .content {
@@ -136,6 +143,7 @@ body {
 	right: 0;
 	bottom: 3px;
 	height: 40px;
+	top: 37px;
 }
 
 @keyframes fadein {
@@ -191,7 +199,7 @@ body {
 	width: 100%;
 	background-color: #fff;
 }
-
+/*
 #header .navigator .nav-item .sub li {
 	line-height: 40px;
 	text-align: center;
@@ -201,22 +209,24 @@ body {
 	font-size: 13px;
 }
 
-#header .navigator .nav-item.hover .sub, #header .navigator .nav-item:hover .sub {
+#header .navigator .nav-item.hover .sub, #header .navigator:hover .nav-item .sub {
 	display: block;
 	animation: fadein 0.5s;
 }
-
+*/
 #footer {
 	clear: both;
-	margin-top: 200px;
+	margin-top: 100px;
 	background-color: #37383a;
 	font-size: 13px;
-	border-bottom: 30px solid #292a2c;
+	position: relative;
 }
 
 #footer .container {
 	padding: 15px 0 50px;
 	position: relative;
+	min-height: 180px;
+	overflow: hidden;
 }
 
 #footer a {
@@ -227,13 +237,25 @@ body {
 #footer .fnav {
 	display: flex;
 	vertical-align: top;
+	margin-right: 240px;
+}
+
+#footer .f-logo {
+	background: no-repeat url(/images/logo-w.png) center 10px;
+	width: 240px;
+	height: 1000px;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	border-left: 1px solid #fff;
 }
 
 #footer .container .nav-item {
 	flex: 1 1 auto;
-	width: 140px;
+	width: 120px;
 	display: inline-block;
 	line-height: 23px;
+	float: left;
 }
 
 #footer .fnav .home {
@@ -271,8 +293,11 @@ body {
 	color: #ccc;
 	text-align: center;
 	width: 100%;
-	position: absolute;
-	bottom: -30px;
-	left: 0;
 	line-height: 30px;
+	background-color: #292a2c;
+	margin-top: 20px;
+}
+
+.clrfix {
+	clear: both;
 }

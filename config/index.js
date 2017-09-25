@@ -42,7 +42,9 @@ var config = {
 		  maxConnections: 10,
 		  minConnections: 0,
 		  maxIdleTime: 30000
-		}
+		},
+		
+		logging: false
 	},
 	
 	logoURL: '/images/logo.png',

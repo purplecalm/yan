@@ -43,37 +43,88 @@ body {
 	right: -100%;
 }
 
-.m-subnav, .m-content {
+.m-subnav, .m-content, .m-nav-path {
 	background-color: #fff;
-	margin: 30px 0;
+	margin: 20px 0;
 	overflow: hidden;
 }
 
+.m-nav-path {
+	padding: 10px 15px;
+}
+
+.m-nav-path em {
+	font-style: normal;
+}
+
+.m-nav-path a {
+	position: relative;
+	display: inline-block;
+}
+
+.m-nav-path span {
+	opacity: 0;
+	padding: 0 5px;
+}
+
+.m-nav-path a:after {
+	content: ' ';
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	right: -12px;
+	top: 8px;
+	border: 1px solid #333;
+	border-width: 1px 1px 0 0;
+	transform: rotate(45deg);
+}
+
+
+.m-subnav {
+	padding: 15px;
+}
+
 .m-subnav h2 {
-	color: #fff;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 36px;
-	background-color: #555;
-	text-indent: 12px;
+	font-size: 18px;
+	color: #333;
+	line-height: 30px;
+	font-weight: normal;
+	margin-bottom: 10px;
 }
 
 .m-subnav ul {
-	padding: 12px 0;
+	padding: 5px;
 }
 
 .m-subnav ul li {
-	line-height: 30px;
+	line-height: 26px;
 	margin-bottom: 1px;
 }
 
 .m-subnav ul a {
 	display: block;
-	padding: 0 12px;
+	position: relative;
+	padding-left: 7px;
 }
 
 .m-subnav ul a:hover, .m-subnav li.current a{
-	background-color: #ccc;
+	text-decoration: underline;
+}
+
+.m-subnav li.current a {
+	color: #000;
+}
+
+.m-subnav li.current a:after {
+	content: ' ';
+	width: 3px;
+	height: 3px;
+	border: 1px solid #000;
+	border-width: 1px 1px 0 0;
+	transform: rotate(45deg);
+	position: absolute;
+	left: -1px;
+	top: 11px;
 }
 
 .m-content {

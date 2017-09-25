@@ -24,7 +24,7 @@
 		</div>
 		<div class="raster r16">
 			<% if(article) { %>
-			<div class="m-nav-path"><a href="/">首页</a><span></span><a href="/category/<%= category.id %>"><%= category.name %></a><span></span><a href="/category/<%= sub.id %>"><%= sub.name %></a></div>
+			<div class="m-nav-path"><a href="/">首页</a><span>&gt;</span><a href="/category/<%= category.id %>"><%= category.name %></a><span>&gt;</span><a href="/category/<%= sub.id %>"><%= sub.name %></a><span>&gt;</span><em>文章</em></div>
 			<div class="m-content">
 				<div class="title"><h2><%= article.title %></h2></div>
 				<div class="content">

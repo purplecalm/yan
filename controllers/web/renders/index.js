@@ -30,7 +30,7 @@ renders.sublist=function* (cfg, layout){
 	html.push('<div class="module-content m-sublist-content"><ul>');
 	
 	articles.forEach(function(d){
-		html.push('<li><a href="/article/'+d.id+'">'+d.title+'</a><div class="summary">'+Tools.subByte(d.summary||'',80)+'</div><span class="time">'+d.date+'</span></li>');
+		html.push('<li><div class="box"><a href="/article/'+d.id+'">'+d.title+'</a><div class="summary">'+Tools.subByte(d.summary||'',80)+'</div><span class="time">'+d.date+'</span></div></li>');
 	});
 	
 	html.push('</ul></div>');
@@ -78,7 +78,7 @@ renders.list=function* (cfg, layout){
 	panels.forEach(function(articles, index){
 		html.push('<div class="module-content m-list-content" style="display: none"><ul>');
 		articles.forEach(function(d){
-			html.push('<li><a href="/article/'+d.id+'">'+d.title+'</a><div class="summary">'+Tools.subByte(d.summary||'',80)+'</div><span class="time">'+d.date+'</span></li>');
+			html.push('<li><div class="box"><a href="/article/'+d.id+'">'+d.title+'</a><div class="summary">'+Tools.subByte(d.summary||'',80)+'</div><span class="time">'+d.date+'</span></div></li>');
 		});
 		html.push('</ul><div class="more"><a href="/category/',children[index].id,'" target="_blank">更多</a></div></div>');
 	});

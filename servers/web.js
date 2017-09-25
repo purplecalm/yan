@@ -38,7 +38,9 @@ app.use(middlewares.conditional());
 app.use(middlewares.etag());
 
 var viewDir = path.join(rootdir, 'view', 'web');
-cacheService.writeLayout();
+cacheService.writeLayout().then(function(){
+	console.info('[INFO] layout written');
+});
 
 
 middlewares.ejs(app, {
