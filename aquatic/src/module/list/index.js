@@ -70,25 +70,57 @@ define(['index.mustache'],function(tpl){
 			if(arguments.length&&arguments[0]){
 				this.current=v.id||false;
 				this.numberInput.val(v.rows||10);
+				this.subs=v.subs||[];
 			}
 			
 			return {
 				rows: parseInt(this.numberInput.val(),10)||10,
-				id: this.current
+				id: this.current,
+				subs: this.subs
 			};
 		},
 		
+		checkSub: function(){
+			var ids=[];
+			this.dom.find('[data-sub].checked').each(function(){
+				ids.push($(this).data('sub'));
+			});
+			this.subs=ids;
+		},
+		
 		initEvents: function(){
-			var items=this.dom.find('[data-id]'), self=this;
+			var items=this.dom.find('[data-id]'), subs=this.dom.find('[data-sub]'), uls=this.dom.find('ul'), self=this;
 			
 			items.bind('click',function(){
+			
+				if($(this).hasClass('checked')){
+					return;
+				}
+			
 				items.removeClass('checked');
-				$(this).addClass('checked');
+				uls.hide().find('.checked').removeClass('checked');
+				$(this).addClass('checked').next('ul').show().find('[data-sub]').addClass('checked');
 				self.current=$(this).data('id');
+				self.checkSub();
+			});
+			
+			subs.bind('click', function(){
+				if($(this).hasClass('checked')){
+					$(this).removeClass('checked');
+				}else{
+					$(this).addClass('checked');
+				}
+				self.checkSub();
 			});
 			
 			if(this.current){
-				items.filter('[data-id="'+this.current+'"]').addClass('checked');
+				items.filter('[data-id="'+this.current+'"]').addClass('checked').next('ul').show();
+			}
+			
+			if(this.subs){
+				$.each(this.subs,function(i,id){
+					subs.filter('[data-sub="'+id+'"]').addClass('checked');
+				});
 			}
 		}
 	});

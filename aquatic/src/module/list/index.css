@@ -19,11 +19,29 @@
 	border-radius: 3px;
 }
 
-.m-module-list .list-item .item-title:hover {
+.m-module-list .list-item ul {
+	margin: 10px 10px 0 0;
+	display: none;
+}
+
+.m-module-list .list-item ul li {
+	cursor: pointer;
+	border-radius: 3px;
+	color: #666;
+	margin-bottom: 5px;
+	background-color: #f9f9f9;
+}
+
+.m-module-list .list-item .item-title:hover, .m-module-list .list-item ul li:hover  {
 	background-color: #eee;
 }
 
 .m-module-list .list-item .item-title.checked {
 	background-color: #e88844;
+	color: #fff;
+}
+
+.m-module-list .list-item ul li.checked {
+	background-color: #e0b699;
 	color: #fff;
 }

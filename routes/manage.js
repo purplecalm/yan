@@ -5,6 +5,7 @@ var api = require('../controllers/manage/api');
 
 function routes(app) {
 	app.get('/', home);
+	app.get('/manage', home);
 
 	app.get(/\/api\/(.+)$/, api);
 	app.get('/api/:key', api);

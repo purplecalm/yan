@@ -12,7 +12,7 @@ var root = path.dirname(__dirname);
 var imgDir = path.join(process.env.HOME || root, '/static/images');
 
 var config = {
-	title: '宿鸭湖股份',
+	title: '宿鸭湖生态养殖股份有限公司',
 	
 	version: version,
 	imgDir: imgDir,

@@ -223,6 +223,15 @@ var Map={
 		}
 	},
 	
+	'home/sliders/interval': function *(rq){
+		var body=rq.request.query;
+		if(body&&body.interval&&parseInt(body.interval,10)>0){
+			return yield HomeService.setSliderInterval(parseInt(body.interval,10));
+		}else{
+			return false;
+		}
+	},
+	
 	'image/upload': function *(rq){
 		var form = new require('formidable').IncomingForm();
 		form.encoding = 'utf-8';

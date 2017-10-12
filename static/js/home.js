@@ -1,6 +1,7 @@
 ;(function(){
 	var Slider=function(parent){
 		this.parent=$(parent);
+		this.interval=this.parent.data('interval')||5;
 		this.children=$(parent).children();
 		
 		this.init();
@@ -65,7 +66,7 @@
 		
 		initEvents: function(){
 		
-			var handle=false, enter=false, self=this;
+			var handle=false, enter=false, self=this, interval=this.interval*1000;
 			
 			var start=function(){
 				enter=false;
@@ -75,7 +76,7 @@
 					if(!enter){
 						start();
 					}
-				},6000);
+				},interval);
 			};
 			
 			var stop=function(){

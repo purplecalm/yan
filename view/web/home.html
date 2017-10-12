@@ -1,6 +1,6 @@
 <div class="slider-outer">
 	<div class="container">
-		<div class="sliders">
+		<div class="sliders" data-interval="<%= config.sliderInterval %>">
 			<% for( var i=0; i<config.sliders.length; i++){ %>
 			<div class="slider-item wrap">
 				<% if( config.sliders[i].url ) { %><a href="<%= config.sliders[i].url %>" target="_blank"><% } %>

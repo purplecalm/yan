@@ -48,6 +48,10 @@ var checkConfig=function(){
 	if(!homeConfig.modules){
 		homeConfig.modules=[];
 	}
+	
+	if(!homeConfig.sliderInterval){
+		homeConfig.sliderInterval=6;
+	}
 };
 
 exports.get = function* (cfg) {
@@ -155,6 +159,14 @@ exports.newCol = function* (cfg){
 	
 	return newItem;
 }
+
+exports.setSliderInterval = function* (sec){
+	checkConfig();
+	homeConfig.sliderInterval=sec;
+	
+	sync();
+	return true;
+};
 
 exports.setColWidth = function* (cfg){
 	checkConfig();

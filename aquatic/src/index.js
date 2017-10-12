@@ -310,7 +310,13 @@ define([
 			var preview=new Preview({
 				parent: parent.dom
 			});
-			parent.dom.append('<div class="preview-link"><a href="http://www.syhgf.com/?preview" target="_blank">效果预览</a></div>');
+			
+			
+			var domain='';
+			if(window.location.host==='manage.syhgf.com'){
+				domain='http://www.syhgf.com';
+			}
+			parent.dom.append('<div class="preview-link"><a href="'+domain+'/?preview" target="_blank">效果预览</a></div>');
 			
 			var self=this;
 			
@@ -330,6 +336,38 @@ define([
 							sliders: data.sliders,
 							onclick: function(){
 								self.updateSlider(this);
+							}
+						});
+						menus.push({
+							name: '轮播图切换间隔',
+							deep: true,
+							deepText: data.sliderInterval+'秒',
+							sliders: data.sliders,
+							onclick: function(){
+								var item=this;
+								self.updateSliderInterval(this,data,function(interval){
+									item.loading();
+									var err=true;
+									$.ajax({
+										url: '/api/home/sliders/interval',
+										data: {
+											interval: interval
+										},
+										success: function(data){
+											if(data.status&&data.data){
+												err=false;
+												item.deepText(interval+'秒');
+											}
+										},
+										complete: function(){
+											if(err){
+												alert('设置切换间隔失败');
+											}
+											
+											item.loaded();
+										}
+									});
+								});
 							}
 						});
 						
@@ -638,6 +676,42 @@ define([
 						}
 					});
 				}
+			});
+		},
+		
+		updateSliderInterval: function(item,data,callback){
+			if(this.current[1]){
+				this.current[1].unactive();
+			}
+			
+			this.current[1]=item;
+			this.current[1].active();
+			
+			var parent=new WebMenu(2);
+			
+			var menus=[], self=this;
+			for( var i=6; i<21; i+=2){
+				menus.push({
+					name: i,
+					checked: data.sliderInterval==i,
+					onclick: function(){
+						callback(this.data.name);
+						
+						item.unactive();
+						
+						if(self.mobile){
+							history.back();
+						}else{
+							WebMenu.clean(2);
+						}
+					}
+				});
+			}
+			
+			new Menu({
+				dialog: false,
+				menu: menus,
+				parent: parent.dom
 			});
 		},
 		

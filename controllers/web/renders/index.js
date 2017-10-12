@@ -44,7 +44,9 @@ renders.list=function* (cfg, layout){
 
 	var category=CacheService.getCategory(cfg.data.id);
 	
-	var parent=category, children=(category.children||[]).filter(function(d){ return !d.single; }), panels=[];
+	var subs=cfg.data.subs||false;
+	
+	var parent=category, children=(category.children||[]).filter(function(d){ return !d.single&&(!subs||subs.indexOf(d.id)!=-1); }), panels=[];
 	
 	var limit=Number(cfg.data.rows)||10;
 
